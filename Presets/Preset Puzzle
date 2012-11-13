@@ -1,0 +1,29 @@
+<presets    xmlns= "http://josm.openstreetmap.de/tagging-preset-1.0"   author=     "HOT"  description=   "Preset Title"        shortdescription=       "Practice Preset"  	version="1.0">   
+------------------------------------------------
+<item     name=   	"University"    	icon=    "education/university.png"   	type= "node,closedway,relation">    <key  key=      "amenity"      value=    "university"/> <link href=      "http://wiki.openstreetmap.org/wiki/Tag:amenity=university"/>
+<label text=     "Institutions that provide Higher Academic Degrees"/>   <space/>    <check    key=	    "building"	text=    "Building Objects"     default=    "on"	  value_on=       "university" 	
+value_off=   ""/>      <text      key=      "name"        text=       "Name"/>        <optional>      <text     key=       "description"       text=      "Notes"/>       </optional>       </item>
+------------------------------------------------
+<item     name= 	    "Hospital" 	   icon=    "health/hospital.png"        type=       "node,closedway">     <space/>  
+<check key=         "building"        text=    "Building Object"     default=      "on"     value_on=      "hospital"     value_off=      ""/>   <text      key=     "name"	    text=          "Name"/>	     <key     key=  	"amenity" value=      "hospital"/>       <text     key=         "Levels"     text=    "Building Levels"/>       <text      key=     "capacity:persons"      text=    "People Capacity"/>	    </item>   
+------------------------------------------------
+<item name=   "Clinic"    icon=   "/image/doctor.png">
+<link       href=     "http://wiki.openstreetmap.org/wiki/Tag:amenity=doctors"/>
+<label text=    "Clinic"/>     	<space/>      <text    key=      "name"     	text=   	"Name"/>   <key    key=     "amenity" 	   value=    "doctors"/>	
+<key      key=     "doctors:type_idn"   value=     "Health Clinic"/>
+<combo        key=     "opening_hours"        text=    "Hours Open"   	values=   "24/7,Mo-Fr 08:30-20:00,Tu-Su 
+08:00-15:00"/>     <optional>     <text key=	     "description"     text=    "Offices"/>      </optional>   </item>
+------------------------------------------------
+<item    name=   	"Gov´t Offices">     <combo key=       "access:	roof" 	  text=      "Roof Access?"      values=       "no,yes"       display_values= 	      "No, Yes"/>    <combo        key=     "building:levels"      text= 	  "stories"    	values= 	"1,2,3,4-7,>7"/>      <combo       key=     "admin_level"       text= 	    
+"admin level"  	  values= 	"5,6,7,8"       display_values=     "state, county, district, village,"/>       <combo        key=     "building:wall"    	text= 	
+"wall type"       values= 	"brick,wood,bamboo" 	
+display_values=     "brick, wood, bamboo"/>         </item>
+-----------------------------------------------
+<item	   name=	      "Restaurants">   <text       key=      "name"       text=  "Restaurant Name"/>  <multiselect       key=      "cuisine"      text=       "Types of Food" 	values=	"French; Indian; Chinese; Thai; Japanese; Mexican"	   	default=  ""/>    </item>
+<group       name= 	    "Gas Stations">   <group	    name=    "Public gas stations">  
+<item    name=     "(gas co.)">    <key   key=    "amenity"   value=     "fuel"/>
+<check     key=     "fuel:diesel"     text=  "Does it sell Diesel?"    value_on=  "yes"	    value_off=   "no"	  default=	"on"/>  <combo	   key=     "opening_hours"   text=    "Hours Open"    values=   "00:00-24:00,08:30-20:00,sunrise-sunset"    display_values=   
+"24/7, 08.30-20.00, Sunrise - Sunset"/>      </item> </group>  
+<group        name=      "Privately Owned">   <item     name=     "Shell"     icon=  "images\shell.png">       <check      key=  "fuel:diesel"     text=     
+"Does it sell diesel?"    value_on=  "yes" 	 value_off=      "no"	    default=	"on"/>     <key     key=     "amenity"	value=    "fuel"/>      <text     key=   "addr:full"   	 text=      "address"/>     </item> 
+<item     name=     "Petrol"     icon= "http://mapbox.com/maki/www/images/maki-preview-18.png">   <check    key=    "fuel:diesel"    text=  "Does it sell Diesel?"    value_on=    "yes"	   value_off=     "no"	default=	   "on"/>  <key	   key=     "amenity"     value=  "fuel"/>      <text     key=   "addr:city"   text=     "City"/>      <text   key=       "addr:street"      text=     "Road Name"/>       <text      key=   "addr:housenumber"    text=  "Number"/>      </item>        </group>   </group>        </presets>
